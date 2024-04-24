@@ -1,0 +1,16 @@
+name: Daily News
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # Runs at midnight every day
+
+jobs:
+  run_daily_news:
+    name: Run Daily News
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v3
+
+      - name: Run daily-news script
+        run: ./daily-news
