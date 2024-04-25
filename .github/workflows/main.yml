@@ -1,16 +1,23 @@
-name: Daily News
+name: Daily News Script
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs at midnight every day
+    - cron: "15 11 * * *"  # Runs every day at midnight UTC
 
 jobs:
-  run_daily_news:
-    name: Run Daily News
+  run-script:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out code
-        uses: actions/checkout@v3
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
 
-      - name: Run daily-news script
-        run: ./daily-news
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      
+      - name: Run script
+        run: python daily-news.py
