@@ -19,5 +19,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       
-      - name: Run script
+      - name: Set up environment variables
+        env:
+          NEWS_API_KEY: ${{ secrets.NEWS_API_KEY }}
         run: python daily-news.py
