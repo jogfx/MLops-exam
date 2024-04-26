@@ -600,9 +600,9 @@ preprocessed_data = preprocess_data(api_data, article_retriever)
 client = chromadb.Client()
 collection = client.get_or_create_collection("DailyNews")
 # Iterate over the DataFrame and extract data into lists
-documents = preprocessed_data['Content'].tolist()  # Assuming 'Content' is the column containing document data
-metadatas = [{'title': title, 'publishedAt': published_at} for title, published_at in zip(preprocessed_data['title'], preprocessed_data['publishedAt'])]
-ids = preprocessed_data['ID'].tolist()  # Assuming 'ID' is the column containing document IDs
+documents = preprocessed_data['Content'].tolist()  
+metadatas = [{'title': title, 'publishedAt': published_at, 'Name': name['name']} for title, published_at, name in zip(preprocessed_data['title'], preprocessed_data['publishedAt'], preprocessed_data['Name'])]
+ids = preprocessed_data['ID'].tolist()  
 # Convert IDs to strings
 ids = [str(id_) for id_ in ids]
 
