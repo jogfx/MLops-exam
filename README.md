@@ -1,4 +1,4 @@
-**News sentiment classifier using Support Vector Machine**
+****News sentiment classifier using Support Vector Machine****
 
 ***Data collection:***
 The data used for this project was collected from the same source, however the initial model training was made on a static dataset from Kaggle.  (Saksham Kumar 2024)The same Kaggle user provides the script utilized for retrieving data from the NewsAPI.  (NewsAPI 2024)
