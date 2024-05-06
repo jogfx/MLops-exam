@@ -1,6 +1,6 @@
 ### ****News sentiment classifier using Support Vector Machine****
 
-***Data collection:***
+#***Data collection:***
 The data used for this project was collected from the same source, however the initial model training was made on a static dataset from Kaggle.  (Saksham Kumar 2024)The same Kaggle user provides the script utilized for retrieving data from the NewsAPI.  (NewsAPI 2024)
 This script has been utilized in a modified version, to collect the new data for the project. The script collect new data every 24 hours, which is then stored a SQL database located on the virtual machine that is also running the python environment used in this project.
 ***Data preprocessing:***
