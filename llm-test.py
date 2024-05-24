@@ -1,12 +1,4 @@
 # %%
-# Install necessary packages
-!pip install langchain together sqlalchemy langchain_community langchain_experimental transformers
-
-
-# %%
-!pip install langchain-core
-
-# %%
 import os
 from langchain import SQLDatabase
 from langchain_experimental.sql import SQLDatabaseSequentialChain, SQLDatabaseChain
