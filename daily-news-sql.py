@@ -15,7 +15,6 @@ from sqlalchemy.orm import sessionmaker
 
 
 # %%
-load_dotenv(dotenv_path= "/work/MLops/.env")
 api_key = os.getenv("NEWS_API_KEY")
 
 # %%
